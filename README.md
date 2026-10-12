@@ -9,11 +9,11 @@ I build end-to-end AI systems — from dataset creation and model training to re
 - LLM applications with LangChain, LangGraph and RAG
 
 ### 🚀 Featured projects
-- **[ISBAK Smart Intersection System](https://github.com/KULLANICI_ADIN/ISBAK-Smart-Intersection-System)** — real-time vehicle counting, traffic density analysis and emergency vehicle prioritization (YOLOv8 + ByteTrack)
-- **[EDS AI Anomaly Detection](https://github.com/KULLANICI_ADIN/EDS-AI-Anomaly-Detection)** — stopped-vehicle, wrong-way and collision detection from CCTV with MQTT alarms
-- **[Road Damage Detection (Edge AI)](https://github.com/KULLANICI_ADIN/Road-Damage-Detection-Edge-AI)** — pothole and road damage detection with GPS-tagged reports
-- **Automatic Waste Sorting** — YOLOv8 + robotic arm, 95.4% mAP on a custom 1,200-image dataset (TÜBİTAK 2209-A)
-- **[E-commerce API](https://github.com/KULLANICI_ADIN/e-commerce-api-project)** — RESTful API with Spring Boot, Spring Security and JWT
+- **[ISBAK Smart Intersection System](https://github.com/esra-yasar/ISBAK-Smart-Intersection-System)** — real-time vehicle counting, traffic density analysis and emergency vehicle prioritization (YOLOv8 + ByteTrack)
+- **[EDS AI Anomaly Detection](https://github.com/esra-yasar/EDS-AI-Anomaly-Detection)** — stopped-vehicle, wrong-way and collision detection from CCTV with MQTT alarms
+- **[Road Damage Detection (Edge AI)](https://github.com/esra-yasar/Road-Damage-Detection-Edge-AI)** — pothole and road damage detection with GPS-tagged reports
+- **Automatic Waste Sorting** — YOLOv8 + robotic arm, 95.4% mAP on a custom 1,200-image dataset (TÜBİTAK 2209-A) · *code will be published after the project is completed*
+- **[E-commerce API](https://github.com/esra-yasar/e-commerce-api-project)** — RESTful API with Spring Boot, Spring Security and JWT
 
 ### 💼 Experience
 - **Computer Vision & AI Intern @ İSBAK** (Jul–Aug 2026) — 30+ FPS traffic analysis, <50 ms inference on NVIDIA Jetson
@@ -23,6 +23,6 @@ I build end-to-end AI systems — from dataset creation and model training to re
 Python · PyTorch · YOLOv8 · OpenCV · ByteTrack · LangChain · Transformers · Docker · Linux · Java · Spring Boot · SQL
 
 ### 📫 Contact
-[LinkedIn](https://linkedin.com/in/ysresra) · esrayasarr60@gmail.com
+[LinkedIn](https://www.linkedin.com/in/esrayasar) · esrayasarr60@gmail.com
 
 💼 Looking for a long-term AI internship (Feb–Jun 2027)
