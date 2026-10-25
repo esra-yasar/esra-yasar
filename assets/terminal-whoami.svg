@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340">
+  <style>
+    .mono{font-family:Consolas,'Cascadia Mono','Courier New',monospace;font-size:14px}
+    @keyframes show{to{opacity:1}}
+    @keyframes type{from{width:0}to{width:900px}}
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    .l{opacity:0;animation:show .01s linear forwards}
+    .cur{animation:blink 1s step-end infinite}
+  </style>
+  <defs>
+    <clipPath id="c1"><rect x="40" y="62" height="24" width="0"><animate attributeName="width" from="0" to="420" begin="0.3s" dur="1.2s" fill="freeze"/></rect></clipPath>
+    <clipPath id="c2"><rect x="40" y="290" height="24" width="0"><animate attributeName="width" from="0" to="420" begin="5.2s" dur="1s" fill="freeze"/></rect></clipPath>
+  </defs>
+
+  <rect width="1000" height="340" rx="12" fill="#0d0a1c" stroke="#3b2a6b"/>
+  <rect width="1000" height="36" rx="12" fill="#1a1433"/>
+  <rect y="24" width="1000" height="12" fill="#1a1433"/>
+  <circle cx="24" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="44" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="64" cy="18" r="6" fill="#28c840"/>
+  <text x="500" y="23" text-anchor="middle" class="mono" fill="#8b7fb8" font-size="13">esra@istanbul: ~</text>
+
+  <!-- command 1 (typed) -->
+  <g clip-path="url(#c1)">
+    <text x="40" y="80" class="mono"><tspan fill="#34d399">esra@istanbul</tspan><tspan fill="#8b7fb8">:</tspan><tspan fill="#c084fc">~</tspan><tspan fill="#f5f3ff">$ whoami --verbose</tspan></text>
+  </g>
+
+  <g class="mono">
+    <text x="40" y="112" class="l" style="animation-delay:1.8s"><tspan fill="#ff8fe0">name</tspan><tspan x="140" fill="#f5f3ff">Esra Yaşar</tspan></text>
+    <text x="40" y="136" class="l" style="animation-delay:2.2s"><tspan fill="#ff8fe0">role</tspan><tspan x="140" fill="#f5f3ff">Computer Engineering student · AI / ML</tspan></text>
+    <text x="40" y="160" class="l" style="animation-delay:2.6s"><tspan fill="#ff8fe0">school</tspan><tspan x="140" fill="#f5f3ff">Bilecik Şeyh Edebali University</tspan></text>
+    <text x="40" y="184" class="l" style="animation-delay:3.0s"><tspan fill="#ff8fe0">built</tspan><tspan x="140" fill="#f5f3ff">detection &amp; segmentation models with YOLOv8</tspan></text>
+    <text x="40" y="208" class="l" style="animation-delay:3.4s"><tspan fill="#ff8fe0">learning</tspan><tspan x="140" fill="#34d399">LLMs · RAG · LangChain</tspan><tspan fill="#8b7fb8">  (committing daily)</tspan></text>
+    <text x="40" y="232" class="l" style="animation-delay:3.8s"><tspan fill="#ff8fe0">interns</tspan><tspan x="140" fill="#f5f3ff">İSBAK (2026) · Enoca (2025)</tspan></text>
+    <text x="40" y="256" class="l" style="animation-delay:4.2s"><tspan fill="#ff8fe0">status</tspan><tspan x="140" fill="#fbbf24">● open to spring 2027 internships</tspan></text>
+  </g>
+
+  <!-- command 2 -->
+  <g clip-path="url(#c2)">
+    <text x="40" y="308" class="mono"><tspan fill="#34d399">esra@istanbul</tspan><tspan fill="#8b7fb8">:</tspan><tspan fill="#c084fc">~</tspan><tspan fill="#f5f3ff">$ python train.py --dream big</tspan></text>
+  </g>
+  <rect class="l cur" style="animation:show .01s linear 6.3s forwards, blink 1s step-end 6.3s infinite" x="416" y="294" width="9" height="18" fill="#ff5fd2"/>
+</svg>

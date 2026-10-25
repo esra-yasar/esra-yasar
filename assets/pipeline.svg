@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+  <style>
+    .mono{font-family:Consolas,'Cascadia Mono','Courier New',monospace}
+    .sans{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif}
+    @keyframes flow{to{stroke-dashoffset:-20}}
+    @keyframes pulse{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+    .wire{stroke-dasharray:5 5;animation:flow 1s linear infinite}
+    .node{animation:pulse 3s ease-in-out infinite}
+  </style>
+  <rect width="1000" height="300" rx="12" fill="#0d0a1c" stroke="#3b2a6b"/>
+
+  <text x="40" y="40" class="mono" font-size="13" fill="#8b7fb8" letter-spacing="2">PIPELINE_01 · VISION</text>
+  <text x="40" y="180" class="mono" font-size="13" fill="#8b7fb8" letter-spacing="2">PIPELINE_02 · LANGUAGE</text>
+  <text x="960" y="40" class="mono" font-size="12" fill="#ff5fd2" text-anchor="end">● where I've been</text>
+  <text x="960" y="180" class="mono" font-size="12" fill="#34d399" text-anchor="end">● where I'm heading</text>
+
+  <!-- vision row -->
+  <g>
+    <path id="v" d="M190 92H810" stroke="#7c3aed" stroke-width="2" class="wire" fill="none"/>
+    <circle r="5" fill="#ff5fd2"><animateMotion dur="3s" repeatCount="indefinite" path="M190 92H810"/></circle>
+    <circle r="5" fill="#ff5fd2" opacity=".6"><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" path="M190 92H810"/></circle>
+    <g class="sans" font-size="14" text-anchor="middle">
+      <rect x="40" y="62" width="150" height="60" rx="8" fill="#1a1433" stroke="#ff5fd2"/>
+      <text x="115" y="88" fill="#f5f3ff" font-weight="700">Frames</text>
+      <text x="115" y="108" fill="#a78bfa" font-size="11" class="mono">video / satellite</text>
+
+      <rect x="250" y="62" width="150" height="60" rx="8" fill="#1a1433" stroke="#ff5fd2" class="node"/>
+      <text x="325" y="88" fill="#f5f3ff" font-weight="700">YOLOv8</text>
+      <text x="325" y="108" fill="#a78bfa" font-size="11" class="mono">detect · segment</text>
+
+      <rect x="460" y="62" width="150" height="60" rx="8" fill="#1a1433" stroke="#ff5fd2" class="node" style="animation-delay:1s"/>
+      <text x="535" y="88" fill="#f5f3ff" font-weight="700">ByteTrack</text>
+      <text x="535" y="108" fill="#a78bfa" font-size="11" class="mono">track IDs</text>
+
+      <rect x="670" y="62" width="150" height="60" rx="8" fill="#1a1433" stroke="#ff5fd2"/>
+      <text x="745" y="88" fill="#f5f3ff" font-weight="700">Insights</text>
+      <text x="745" y="108" fill="#a78bfa" font-size="11" class="mono">damage · change</text>
+    </g>
+  </g>
+
+  <!-- connector between rows -->
+  <path d="M890 92V232" stroke="#3b2a6b" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+  <path d="M820 92H890" stroke="#3b2a6b" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+  <path d="M820 232H890" stroke="#3b2a6b" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+  <circle r="4" fill="#fbbf24"><animateMotion dur="2.5s" repeatCount="indefinite" path="M820 92H890V232H820"/></circle>
+
+  <!-- language row -->
+  <g>
+    <path d="M190 232H810" stroke="#059669" stroke-width="2" class="wire" fill="none"/>
+    <circle r="5" fill="#34d399"><animateMotion dur="3s" repeatCount="indefinite" path="M190 232H810"/></circle>
+    <circle r="5" fill="#34d399" opacity=".6"><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" path="M190 232H810"/></circle>
+    <g class="sans" font-size="14" text-anchor="middle">
+      <rect x="40" y="202" width="150" height="60" rx="8" fill="#0f1f1a" stroke="#34d399"/>
+      <text x="115" y="228" fill="#f5f3ff" font-weight="700">Documents</text>
+      <text x="115" y="248" fill="#6ee7b7" font-size="11" class="mono">course notes</text>
+
+      <rect x="250" y="202" width="150" height="60" rx="8" fill="#0f1f1a" stroke="#34d399" class="node"/>
+      <text x="325" y="228" fill="#f5f3ff" font-weight="700">Embeddings</text>
+      <text x="325" y="248" fill="#6ee7b7" font-size="11" class="mono">chunk · embed</text>
+
+      <rect x="460" y="202" width="150" height="60" rx="8" fill="#0f1f1a" stroke="#34d399" class="node" style="animation-delay:1s"/>
+      <text x="535" y="228" fill="#f5f3ff" font-weight="700">Retriever</text>
+      <text x="535" y="248" fill="#6ee7b7" font-size="11" class="mono">vector search</text>
+
+      <rect x="670" y="202" width="150" height="60" rx="8" fill="#0f1f1a" stroke="#34d399"/>
+      <text x="745" y="228" fill="#f5f3ff" font-weight="700">LLM</text>
+      <text x="745" y="248" fill="#6ee7b7" font-size="11" class="mono">grounded answer</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0a1c"/>
+      <stop offset="1" stop-color="#160f2e"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c084fc"/>
+      <stop offset="0.5" stop-color="#ff5fd2"/>
+      <stop offset="1" stop-color="#c084fc"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff5fd2" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ff5fd2" stop-opacity="0.55"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#2a1f4d" stroke-width="1"/>
+    </pattern>
+    <clipPath id="frameClip"><rect x="640" y="48" width="310" height="214" rx="6"/></clipPath>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .mono{font-family:Consolas,'Cascadia Mono','Courier New',monospace}
+    .sans{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes flow{to{stroke-dashoffset:-24}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes boxCycle{0%,12%{stroke-dashoffset:520;opacity:1}35%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+    @keyframes labelCycle{0%,30%{opacity:0}38%,85%{opacity:1}100%{opacity:0}}
+    .dot{animation:blink 1.4s ease-in-out infinite}
+    .f1{animation:fadeUp .8s ease-out both}
+    .f2{animation:fadeUp .8s ease-out .3s both}
+    .f3{animation:fadeUp .8s ease-out .6s both}
+    .f4{animation:fadeUp .8s ease-out .9s both}
+    .f5{animation:fadeUp .8s ease-out 1.2s both}
+    .line{stroke-dasharray:6 6;animation:flow 1.2s linear infinite}
+    .p1{animation:float 6s ease-in-out infinite}
+    .p2{animation:float 7s ease-in-out 1s infinite}
+    .p3{animation:float 5s ease-in-out 2s infinite}
+    .bx1{stroke-dasharray:520;animation:boxCycle 6s ease-in-out infinite}
+    .bx2{stroke-dasharray:520;animation:boxCycle 6s ease-in-out 1.5s infinite}
+    .lb1{animation:labelCycle 6s ease-in-out infinite}
+    .lb2{animation:labelCycle 6s ease-in-out 1.5s infinite}
+  </style>
+
+  <!-- background -->
+  <rect width="1000" height="320" rx="14" fill="url(#bg)"/>
+  <rect width="1000" height="320" rx="14" fill="url(#grid)" opacity="0.55"/>
+  <rect x="1" y="1" width="998" height="318" rx="13" fill="none" stroke="#3b2a6b"/>
+
+  <!-- floating particles -->
+  <g fill="#c084fc" opacity="0.5">
+    <circle class="p1" cx="520" cy="60" r="2"/>
+    <circle class="p2" cx="580" cy="250" r="1.6"/>
+    <circle class="p3" cx="470" cy="290" r="2.2"/>
+    <circle class="p2" cx="90" cy="40" r="1.5"/>
+    <circle class="p1" cx="600" cy="140" r="1.4"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#ff5fd2" stroke-width="3" fill="none">
+    <path d="M22 44V22H44"/><path d="M978 44V22H956"/>
+    <path d="M22 276V298H44"/><path d="M978 276V298H956"/>
+  </g>
+
+  <!-- LEFT: identity -->
+  <g class="f1">
+    <rect x="58" y="52" width="268" height="28" rx="6" fill="#1d1538" stroke="#7c3aed"/>
+    <circle class="dot" cx="76" cy="66" r="5" fill="#34d399"/>
+    <text x="90" y="71" class="mono" font-size="13" fill="#e9d5ff" letter-spacing="1.5">AI ENGINEER · IN TRAINING</text>
+  </g>
+
+  <g class="f2">
+    <text x="56" y="140" class="sans" font-size="62" font-weight="800" fill="#f5f3ff" letter-spacing="1">ESRA</text>
+    <text x="236" y="140" class="sans" font-size="62" font-weight="800" fill="url(#name)" letter-spacing="1" filter="url(#glow)">YAŞAR</text>
+  </g>
+
+  <g class="f3">
+    <rect x="58" y="160" width="330" height="34" rx="6" fill="none" stroke="#ff5fd2"/>
+    <text x="76" y="183" class="mono" font-size="16" fill="#ff8fe0" letter-spacing="2" font-weight="700">COMPUTER VISION  →  LLM</text>
+  </g>
+
+  <g class="f4">
+    <text x="58" y="222" class="mono" font-size="12.5" fill="#a78bfa" letter-spacing="1.2">COMPUTER ENGINEERING · BILECIK ŞEYH EDEBALI UNIVERSITY</text>
+    <path d="M58 234H520" stroke="#7c3aed" stroke-width="1.5" class="line"/>
+  </g>
+
+  <g class="f5">
+    <rect x="58" y="248" width="470" height="30" rx="6" fill="#140f29" stroke="#3b2a6b"/>
+    <text x="72" y="268" class="mono" font-size="12" fill="#8b7fb8">NOW:</text>
+    <text x="110" y="268" class="mono" font-size="12" fill="#34d399">LLM · RAG · LANGCHAIN</text>
+    <text x="290" y="268" class="mono" font-size="12" fill="#8b7fb8">│  BASE:</text>
+    <text x="352" y="268" class="mono" font-size="12" fill="#fbbf24">ISTANBUL, TR</text>
+  </g>
+
+  <!-- RIGHT: detection frame -->
+  <g>
+    <rect x="640" y="48" width="310" height="214" rx="6" fill="#0a0817" stroke="#7c3aed" stroke-width="1.5"/>
+    <g clip-path="url(#frameClip)">
+      <!-- sky / horizon -->
+      <rect x="640" y="48" width="310" height="100" fill="#120d26"/>
+      <!-- buildings -->
+      <rect x="664" y="92" width="44" height="56" fill="#231a45"/>
+      <rect x="714" y="76" width="34" height="72" fill="#2a1f52"/>
+      <rect x="880" y="88" width="50" height="60" fill="#231a45"/>
+      <g fill="#3b2a6b">
+        <rect x="722" y="86" width="6" height="6"/><rect x="734" y="86" width="6" height="6"/>
+        <rect x="722" y="100" width="6" height="6"/><rect x="734" y="112" width="6" height="6"/>
+        <rect x="890" y="98" width="8" height="6"/><rect x="908" y="110" width="8" height="6"/>
+      </g>
+      <!-- road -->
+      <path d="M760 148H830L950 262H640Z" fill="#1a1433"/>
+      <path d="M795 152V170M795 182V204M795 218V250" stroke="#8b7fb8" stroke-width="3"/>
+      <!-- road damage -->
+      <path d="M700 232l14-6 9 5 12-8 8 6" stroke="#f472b6" stroke-width="2" fill="none"/>
+      <ellipse cx="868" cy="214" rx="26" ry="7" fill="#0a0817" stroke="#4c3b80"/>
+      <!-- bounding boxes -->
+      <rect class="bx1" x="690" y="214" width="66" height="30" fill="none" stroke="#ff5fd2" stroke-width="2"/>
+      <g class="lb1">
+        <rect x="690" y="200" width="56" height="14" fill="#ff5fd2"/>
+        <text x="694" y="211" class="mono" font-size="10" fill="#0a0817" font-weight="700">crack #1</text>
+      </g>
+      <rect class="bx2" x="836" y="200" width="64" height="28" fill="none" stroke="#34d399" stroke-width="2"/>
+      <g class="lb2">
+        <rect x="836" y="186" width="66" height="14" fill="#34d399"/>
+        <text x="840" y="197" class="mono" font-size="10" fill="#0a0817" font-weight="700">pothole #2</text>
+      </g>
+      <rect class="bx1" x="710" y="72" width="42" height="78" fill="none" stroke="#a78bfa" stroke-width="2"/>
+      <g class="lb1">
+        <rect x="710" y="58" width="52" height="14" fill="#a78bfa"/>
+        <text x="714" y="69" class="mono" font-size="10" fill="#0a0817" font-weight="700">building</text>
+      </g>
+      <!-- scan line -->
+      <rect x="640" y="0" width="310" height="34" fill="url(#scanG)">
+        <animate attributeName="y" values="14;262;14" dur="5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- frame corners -->
+    <g stroke="#ff5fd2" stroke-width="2.5" fill="none">
+      <path d="M640 66V48H658"/><path d="M950 66V48H932"/>
+      <path d="M640 244V262H658"/><path d="M950 244V262H932"/>
+    </g>
+    <circle class="dot" cx="660" cy="276" r="4" fill="#ef4444"/>
+    <text x="672" y="280" class="mono" font-size="11" fill="#c4b5fd" letter-spacing="1">LIVE · YOLOv8 + ByteTrack</text>
+    <text x="950" y="280" class="mono" font-size="11" fill="#6d5fa0" text-anchor="end">frame_0042</text>
+  </g>
+</svg>
